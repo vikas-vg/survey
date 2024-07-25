@@ -1,0 +1,17 @@
+#question-background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -100;
+}
+
+.o_survey_page_per_question {
+    background-color: #f5f5f5d1;
+    padding: 1% 5% 2% 5%;
+    border-radius: 20px;
+    left: 5% !important;
+}
