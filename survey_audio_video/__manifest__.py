@@ -3,6 +3,7 @@
     "summary": """
         This module add Video in Questions Background. Also able to add video video at start and end of the module""",
     "version": "16.0.1.0.0",
+    "license": "LGPL-3",
     "author": "Vikas Goyal",
     "email": "info.vikasgoyal@gmail.com",
     "company": "",
