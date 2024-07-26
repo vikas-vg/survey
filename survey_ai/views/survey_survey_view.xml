@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="survey_question_inherit" model="ir.ui.view">
+            <field name="name">survey.generate.question.ai</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_survey_view_form"/>
+            <field name="arch" type="xml">
+
+                <field name="question_and_page_ids" position="before">
+                    <label for="quantitative_record_id" invisible="1"/>
+                    <field name="quantitative_record_id" invisible="1"/>
+                    <button name="action_open_conversation_view" type="object" string="Generate AI Questions"
+                        context="{'default_survey_id': active_id, 'default_survey_method': 'quantitative'}" class="oe_highlight" />
+                    <br/>
+                    <br/>
+                </field>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>
+

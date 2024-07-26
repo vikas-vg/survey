@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="survey_ai_inherit_form" model="ir.ui.view">
+            <field name="name">survey.ai.inherit.form</field>
+            <field name="model">survey.generate.question</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="survey_id" invisible="1" />
+                        <field name="survey_method" invisible="1" />
+                        <field name="survey_goal"/>
+                        <field name="industry"/>
+                        <field name="target_audience"/>
+                        <field name="survey_length"/>
+                        <field name="initial_question" attrs="{'invisible': [('survey_method','!=', 'qualitative')]}" />
+                        <field name="kpis" placeholder="KPI's"/>
+                    </group>
+                    <footer>
+                        <button name="generate_context" string="Generate AI Questions" type="object" class="oe_highlight" attrs="{'invisible': [('survey_method','!=', 'quantitative')]}"/>
+                        <button name="generate_context" string="Generate Conversation Context" type="object" class="oe_highlight" attrs="{'invisible': [('survey_method','!=', 'qualitative')]}"/>
+                        <button special="cancel" icon="fa-archive" string="Close"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="generate_question_action" model="ir.actions.act_window">
+            <field name="name">Generate AI Questions</field>
+            <field name="res_model">survey.generate.question</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>
