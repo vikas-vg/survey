@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="survey_survey_video_form">
+            <field name="name">survey.survey.video.form</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_survey_view_form"/>
+            <field name="arch" type="xml">
+                <field name="description" position="after">
+                    <group>
+                        <group>
+                            <field name="survey_start_video_name" invisible="1"/>
+                            <field name="survey_start_video" widget="video" filename="survey_start_video_name"/>
+                        </group>
+                    </group>
+                </field>
+
+                <field name="description_done" position="after">
+                    <group>
+                        <group>
+                            <field name="survey_end_video_name" invisible="1"/>
+                            <field name="survey_end_video" widget="video" filename="survey_end_video_name"/>
+                        </group>
+                    </group>
+                </field>
+
+            </field>
+        </record>
+    </data>
+</odoo>

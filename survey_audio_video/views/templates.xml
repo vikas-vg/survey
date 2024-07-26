@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <template id="survey_registration_page" inherit_id="survey.survey_fill_form_in_progress">
+            <xpath expr="//div[contains(@class, 'o_survey_form_content_data')]" position="before">
+                <t t-if="survey.questions_layout == 'page_per_question'">
+                    <t t-if="question.background_video">
+                        <div>
+                            <video autoplay="true" id="question-background-video"
+                                   t-attf-src="{{ question.background_video_url }}"/>
+                        </div>
+                    </t>
+                </t>
+            </xpath>
+        </template>
+
+        <template id="survey_start_video" inherit_id="survey.survey_fill_form_start">
+            <xpath expr="//div[contains(@class, 'o_survey_start')]" position="before">
+                    <t t-if="survey.survey_start_video">
+                        <div>
+                            <video autoplay="true" id="question-background-video"
+                                   t-attf-src="{{ survey.survey_start_video_url }}"/>
+                        </div>
+                    </t>
+            </xpath>
+        </template>
+
+        <template id="survey_end_video" inherit_id="survey.survey_fill_form_done">
+            <xpath expr="//div[contains(@class, 'o_survey_finished')]" position="before">
+                    <t t-if="survey.survey_start_video">
+                        <div>
+                            <video autoplay="true" id="question-background-video"
+                                   t-attf-src="{{ survey.survey_end_video_url }}"/>
+                        </div>
+                    </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

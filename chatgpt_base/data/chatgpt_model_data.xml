@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="chatgpt_model_gpt_3_5_turbo_1106" model="chatgpt.model">
+            <field name="name">gpt-3.5-turbo-1106</field>
+        </record>
+        <record id="chatgpt_model_gpt_4_1106_preview" model="chatgpt.model">
+            <field name="name">gpt-4-1106-preview</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="survey_question_form">
+        <field name="name">survey.question.form</field>
+        <field name="model">survey.question</field>
+        <field name="inherit_id" ref="survey.survey_question_form" />
+        <field name="arch" type="xml">
+            <field name="question_type" position="after">
+                <field name="background_video_name" invisible="1" />
+                <field name="background_video" widget="video" filename="background_video_name"/>
+            </field>
+        </field>
+    </record>
+</odoo>
