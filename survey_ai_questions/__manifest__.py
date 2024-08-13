@@ -8,7 +8,7 @@
     "company": "",
     "website": "",
     "category": "survey",
-    "depends": ["survey", "chatgpt_base"],
+    "depends": ["survey", "chatgpt_core"],
     "data": [
         "security/ir.model.access.csv",
         "views/survey_generate_question_view.xml",

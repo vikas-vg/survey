@@ -33,11 +33,11 @@ class SurveyQuestionsAI(models.Model):
                 return UserError(_("Invalid Survey Method"))
 
     def generate_quantitative_questions(self):
-        key = self.env['ir.config_parameter'].sudo().get_param('chatgpt_base.openapi_api_key')
+        key = self.env['ir.config_parameter'].sudo().get_param('chatgpt_core.openapi_api_key')
         if not key:
             raise UserError("Please configure CHATGPT API KEY in settings.")
 
-        model = self.env['ir.config_parameter'].sudo().get_param('chatgpt_base.chatgpt_model')
+        model = self.env['ir.config_parameter'].sudo().get_param('chatgpt_core.chatgpt_model')
         if not model:
             raise UserError("Please configure ChatGPT Model in settings.")
         model = self.env['chatgpt.model'].browse(int(model)).name

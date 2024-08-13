@@ -94,7 +94,7 @@ class SurveySurveyInherit(models.Model):
             'type': 'ir.actions.act_window',
             'view_type': 'form',
             'view_mode': 'form',
-            'view_id': self.env.ref('survey_ai.survey_ai_inherit_form').id,
+            'view_id': self.env.ref('survey_ai_questions.survey_ai_inherit_form').id,
             'res_model': 'survey.generate.question',
             'res_id': res_id,
             'target': 'new',
