@@ -1,4 +1,4 @@
-odoo.define('survey_audio_video.audio_video_survey', function(require){
+odoo.define('survey_video.audio_video_survey', function(require){
 
     'user strict';
 

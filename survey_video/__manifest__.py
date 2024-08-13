@@ -16,8 +16,8 @@
     ],
     "assets": {
         "survey.survey_assets": [
-            "survey_audio_video/static/src/scss/survey_background_video.scss",
-            # "survey_audio_video/static/src/js/survey.js",
+            "survey_video/static/src/scss/survey_background_video.scss",
+            # "survey_video/static/src/js/survey.js",
         ]
     },
     "application": True
